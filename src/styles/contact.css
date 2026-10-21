@@ -1,0 +1,302 @@
+/* Contact Page & Inquiry Form Styles */
+.contact-page-wrapper {
+  padding-bottom: 5rem;
+}
+
+.contact-hero-banner {
+  background-color: var(--burgundy-900);
+  background: linear-gradient(135deg, #2b0310 0%, #5c0926 60%, #350414 100%);
+  color: #ffffff;
+  padding: 5rem 1.5rem 4rem 1.5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border-gold-medium);
+}
+
+.contact-hero-banner .section-title {
+  color: #ffffff;
+}
+
+.contact-main-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 3rem;
+  margin-top: -2.5rem;
+  position: relative;
+  z-index: 10;
+}
+
+/* Inquiry Form Box */
+.inquiry-form-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 3rem 2.5rem;
+  border: 1px solid var(--border-gold-medium);
+  box-shadow: 0 16px 45px rgba(32, 4, 13, 0.08);
+}
+
+.form-group-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.form-control-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-control-item.full-width {
+  grid-column: span 2;
+}
+
+.form-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--burgundy-900);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-label .required-star {
+  color: #c9184a;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1.5px solid rgba(212, 175, 55, 0.35);
+  border-radius: 10px;
+  background: #fffdfb;
+  color: var(--text-dark);
+  font-size: 0.92rem;
+  transition: all var(--transition-fast);
+  outline: none;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: var(--burgundy-700);
+  box-shadow: 0 0 0 3px rgba(92, 9, 38, 0.12);
+  background: #ffffff;
+}
+
+.form-input.has-error,
+.form-select.has-error {
+  border-color: #d90429;
+  background: #fff5f5;
+}
+
+.form-error-msg {
+  font-size: 0.76rem;
+  color: #d90429;
+  font-weight: 600;
+}
+
+/* Services Multi-Select Checkboxes */
+.services-checkbox-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+}
+
+.service-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.65rem 0.85rem;
+  border-radius: 8px;
+  background: var(--bg-cream);
+  border: 1px solid var(--border-gold-subtle);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.service-checkbox-label:hover {
+  background: var(--bg-blush);
+  border-color: var(--gold-400);
+}
+
+.service-checkbox-label.checked {
+  background: rgba(92, 9, 38, 0.08);
+  border-color: var(--burgundy-700);
+  color: var(--burgundy-900);
+  font-weight: 700;
+}
+
+.service-checkbox-input {
+  accent-color: var(--burgundy-800);
+  width: 16px;
+  height: 16px;
+}
+
+/* Contact Info Sidebar Cards */
+.contact-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-card-box {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 2.25rem 2rem;
+  border: 1px solid var(--border-gold-medium);
+  box-shadow: 0 10px 30px rgba(32, 4, 13, 0.06);
+}
+
+.contact-card-title {
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  color: var(--burgundy-900);
+  margin-bottom: 0.5rem;
+}
+
+.contact-card-sub {
+  font-size: 0.86rem;
+  color: var(--text-muted);
+  margin-bottom: 1.75rem;
+}
+
+.contact-direct-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.contact-link-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  text-decoration: none;
+  color: var(--text-dark);
+  transition: color var(--transition-fast);
+}
+
+.contact-link-row:hover {
+  color: var(--burgundy-800);
+}
+
+.contact-icon-wrapper {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--bg-blush);
+  border: 1px solid var(--border-gold-subtle);
+  color: var(--burgundy-800);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all var(--transition-fast);
+}
+
+.contact-link-row:hover .contact-icon-wrapper {
+  background: var(--gold-btn-gradient);
+  color: #1a0f05;
+  border-color: #ffffff;
+  transform: scale(1.08);
+}
+
+.contact-link-text h5 {
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--burgundy-900);
+  margin-bottom: 0.2rem;
+}
+
+.contact-link-text p {
+  font-size: 0.84rem;
+  color: var(--text-body);
+}
+
+.whatsapp-action-card {
+  background: linear-gradient(135deg, #1b4d3e 0%, #0d2c22 100%);
+  color: #ffffff;
+  border-radius: 18px;
+  padding: 2rem;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  box-shadow: 0 12px 30px rgba(27, 77, 62, 0.25);
+}
+
+.whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  width: 100%;
+  padding: 0.85rem 1.5rem;
+  border-radius: 9999px;
+  background: #25d366;
+  color: #0b2413;
+  font-weight: 800;
+  font-size: 0.92rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.4);
+  transition: all var(--transition-fast);
+  margin-top: 1.25rem;
+}
+
+.whatsapp-btn:hover {
+  background: #2ee672;
+  transform: translateY(-2px);
+  color: #05160b;
+}
+
+/* Form Demo Submission Success Banner */
+.demo-success-box {
+  background: linear-gradient(135deg, #fbf7ec 0%, #faecd5 100%);
+  border: 1.5px solid var(--gold-500);
+  border-radius: 16px;
+  padding: 2.25rem 2rem;
+  text-align: center;
+  animation: fadeIn 0.4s ease-out;
+}
+
+.demo-badge-banner {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--burgundy-800);
+  color: #ffffff;
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.35rem 0.9rem;
+  border-radius: 9999px;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 960px) {
+  .contact-main-grid {
+    grid-template-columns: 1fr;
+    margin-top: 0;
+    padding-top: 2rem;
+  }
+  .form-group-grid {
+    grid-template-columns: 1fr;
+  }
+  .form-control-item.full-width {
+    grid-column: span 1;
+  }
+  .services-checkbox-grid {
+    grid-template-columns: 1fr;
+  }
+  .inquiry-form-card {
+    padding: 2rem 1.5rem;
+  }
+}

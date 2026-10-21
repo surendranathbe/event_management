@@ -1,0 +1,182 @@
+/* Event Categories Section & Card Grid */
+.events-section {
+  padding: 5rem 0 6rem 0;
+  position: relative;
+  background-color: #fbf7f0;
+  background-image: 
+    radial-gradient(circle at 15% 15%, rgba(212, 175, 55, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 85% 85%, rgba(92, 9, 38, 0.05) 0%, transparent 40%);
+  overflow: hidden;
+}
+
+/* Floral watermark background embellishment */
+.events-bg-watermark {
+  position: absolute;
+  top: 0;
+  right: -5%;
+  width: 500px;
+  height: 500px;
+  opacity: 0.04;
+  pointer-events: none;
+}
+
+.events-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.event-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  height: 290px;
+  box-shadow: 0 8px 24px rgba(32, 4, 13, 0.12);
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all var(--transition-normal);
+  background: #1e050f;
+}
+
+.event-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(92, 9, 38, 0.28);
+  border-color: var(--gold-400);
+}
+
+.event-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.event-card:hover .event-card-img {
+  transform: scale(1.1);
+}
+
+.event-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(20, 2, 8, 0.1) 0%,
+    rgba(20, 2, 8, 0.4) 45%,
+    rgba(20, 2, 8, 0.92) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.25rem;
+  transition: background var(--transition-normal);
+}
+
+.event-card:hover .event-card-overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(20, 2, 8, 0.2) 0%,
+    rgba(92, 9, 38, 0.6) 45%,
+    rgba(20, 2, 8, 0.95) 100%
+  );
+}
+
+.event-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.event-card-title {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.25;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.event-card-arrow-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  flex-shrink: 0;
+  transition: all var(--transition-normal);
+}
+
+.event-card:hover .event-card-arrow-circle {
+  background: var(--gold-500);
+  border-color: var(--gold-500);
+  color: #1a0f05;
+  transform: translateX(3px);
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.6);
+}
+
+/* Category Filter Tabs for Events page */
+.events-filter-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.filter-pill-btn {
+  padding: 0.6rem 1.25rem;
+  border-radius: 9999px;
+  border: 1px solid var(--border-gold-subtle);
+  background: #ffffff;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  transition: all var(--transition-fast);
+}
+
+.filter-pill-btn:hover {
+  border-color: var(--burgundy-700);
+  color: var(--burgundy-800);
+  background: var(--bg-blush);
+}
+
+.filter-pill-btn.active {
+  background: var(--burgundy-800);
+  color: #ffffff;
+  border-color: var(--burgundy-800);
+  box-shadow: var(--shadow-burgundy);
+}
+
+/* Responsive grid */
+@media (max-width: 1200px) {
+  .events-cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .events-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .event-card {
+    height: 240px;
+  }
+}
+
+@media (max-width: 480px) {
+  .events-cards-grid {
+    grid-template-columns: 1fr;
+    max-width: 340px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .event-card {
+    height: 270px;
+  }
+}
